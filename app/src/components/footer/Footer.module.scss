@@ -82,3 +82,26 @@
     font-weight: 400;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footerContent {
+    flex-direction: row-reverse;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .infoSide {
+    flex: 1;
+    align-items: flex-end;
+  }
+  .navSide {
+    flex: 1;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .infoSide {
+    align-items: flex-start;
+  }
+}

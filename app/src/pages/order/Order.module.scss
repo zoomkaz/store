@@ -567,3 +567,26 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .basketSide {
+    position: relative !important;
+    top: 0 !important;
+  }
+  .orderContainer {
+    flex-direction: column;
+  }
+  .changeBox,
+  .changeBoxActive {
+    p {
+      text-align: center;
+    }
+  }
+  .row {
+    flex-wrap: wrap;
+    row-gap: 5px;
+    button {
+      width: 100%;
+    }
+  }
+}
