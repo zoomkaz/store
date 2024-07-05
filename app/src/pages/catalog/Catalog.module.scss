@@ -1,0 +1,99 @@
+@import "../../UI/styles/colors.scss";
+
+.catalogContainer {
+  margin-top: 50px;
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    span {
+      a {
+        text-decoration: none;
+        color: #777777;
+      }
+      font-size: 14px;
+      color: #777777;
+    }
+  }
+}
+
+.main {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  .filterContainer {
+    flex: 1;
+  }
+
+  .itemsContainer {
+    flex: 4;
+  }
+}
+
+.noItems {
+  border-radius: 8px;
+  border: 1px solid $backModal;
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: $border;
+  h1 {
+    font-weight: 800;
+  }
+  p {
+    color: #777777;
+  }
+}
+
+.skeletonContainer {
+  margin: -133px auto 133px auto;
+  display: flex;
+  gap: 10px;
+  padding: 143px 10px 20px 10px;
+  flex-wrap: wrap;
+}
+
+.skeletonBlock1,
+.skeletonBlock2 {
+  width: 100%;
+}
+
+.skeletonBlock1 {
+  flex: 1;
+  @media (max-width: 719px) {
+    display: none;
+  }
+}
+
+.skeletonBlock2 {
+  flex: 3;
+}
+
+.items {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.itemsLoadingContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eeeeee80;
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  height: 100%;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

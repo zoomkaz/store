@@ -1,0 +1,38 @@
+@import "./UI/styles/colors.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: $main $border;
+  }
+  &::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $border;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $main;
+    border-radius: 5px;
+    border: 1px solid #2666ff00;
+  }
+}
+
+.swiper-slide-thumb-active {
+  opacity: 1 !important;
+  border-radius: 8px !important;
+  border: 2px solid $main !important;
+}

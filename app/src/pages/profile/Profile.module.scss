@@ -1,0 +1,91 @@
+@import "../../UI/styles/colors.scss";
+
+.skeletonContainer {
+  margin: -133px auto 133px auto;
+  display: flex;
+  gap: 10px;
+  padding: 143px 10px 20px 10px;
+  flex-wrap: wrap;
+}
+
+.skeletonBlock1,
+.skeletonBlock2 {
+  width: 100%;
+}
+
+.skeletonBlock1 {
+  flex: 1;
+  @media (max-width: 719px) {
+    display: none;
+  }
+}
+
+.skeletonBlock2 {
+  flex: 3;
+}
+
+.profileContainer {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.profileNav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  a {
+    text-decoration: none;
+    p {
+      color: $backModal;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  p {
+    color: $backModal;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.active {
+  color: $standartB !important;
+  border-radius: 8px;
+  padding: 3px;
+  background-color: $border;
+}
+
+.profileContent {
+  border: 2px solid $border;
+  border-radius: 8px;
+  padding: 10px;
+  flex: 4;
+}
+
+.content {
+  margin-top: 50px;
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    span {
+      a {
+        text-decoration: none;
+        color: #777777;
+      }
+      font-size: 14px;
+      color: #777777;
+    }
+  }
+}

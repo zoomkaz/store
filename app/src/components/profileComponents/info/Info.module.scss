@@ -1,0 +1,13 @@
+@import "../../../UI/styles/colors.scss";
+
+.userDataContainer {
+  p {
+    color: $backModal;
+    font-size: 14px;
+    span {
+      color: $standartB;
+      font-size: 16px;
+      margin-left: 20px;
+    }
+  }
+}

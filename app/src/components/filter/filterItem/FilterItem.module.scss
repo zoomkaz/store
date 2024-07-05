@@ -1,0 +1,58 @@
+@import "../../../UI/styles/colors.scss";
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  img {
+    width: 20px;
+    height: 20px;
+    transition: all 0.2s linear;
+  }
+}
+
+.open {
+  transition: all 0.2s linear;
+  overflow: hidden;
+}
+
+.rotate {
+  transform: scaleY(-1);
+}
+
+.priceBox {
+  padding: 10px 25px;
+  .inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $border;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    gap: 10px;
+    margin-bottom: -15px;
+    input {
+      flex: 1;
+      font-size: 20px;
+      font-weight: 700;
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      max-width: 125px;
+      border-radius: 8px;
+    }
+    .inp2 {
+      text-align: right;
+    }
+  }
+}
+
+.brandBox,
+.colorBox,
+.ageBox {
+  padding: 5px 15px;
+  color: grey;
+  max-height: 294px;
+  overflow: auto;
+}

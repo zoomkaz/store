@@ -1,0 +1,107 @@
+@import "../../UI/styles/colors.scss";
+
+.skeletonContainer {
+  margin: -133px auto 133px auto;
+  display: flex;
+  gap: 10px;
+  padding: 143px 10px 20px 10px;
+  flex-wrap: wrap;
+}
+
+.skeletonBlock1,
+.skeletonBlock2 {
+  width: 100%;
+}
+
+.skeletonBlock1 {
+  flex: 1;
+  @media (max-width: 719px) {
+    display: none;
+  }
+}
+
+.skeletonBlock2 {
+  flex: 3;
+}
+
+.adminPage {
+  padding: 50px 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .btn {
+    img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+.formCreate {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .formInput {
+    padding: 10px 5px;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+  }
+  button {
+    border-radius: 8px;
+    padding: 5px 10px;
+    border: 2px solid $main;
+    background-color: transparent;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    &:hover {
+      background-color: $main;
+      color: $standartW;
+    }
+  }
+}
+
+.error,
+.ok {
+  text-align: center;
+  color: $error;
+  font-size: 12px;
+}
+
+.ok {
+  color: rgb(0, 174, 0);
+}
+
+.customSelect {
+  background: #f0f0f0 url("../../assets/icons/arrowDownMini.svg") no-repeat right 10px center;
+  background-size: 12px 12px;
+  border: 1px solid $border;
+  padding: 5px 30px 5px 10px; /* Резервируем место под стрелку */
+  border-radius: 4px;
+  -webkit-appearance: none; /* Стиль для Safari */
+  -moz-appearance: none; /* Стиль для Firefox */
+  appearance: none; /* Стиль для прочих браузеров */
+  cursor: pointer; /* Курсор указателя */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; /* Скрывает длинный текст */
+}
+
+.customSelect:focus {
+  border-color: $mainD;
+}

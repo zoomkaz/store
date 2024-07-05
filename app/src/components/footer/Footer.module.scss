@@ -1,0 +1,84 @@
+@import "../../UI/styles/colors.scss";
+
+.footer {
+  border-top: 1px solid $border;
+  margin-top: 50px;
+  padding: 50px 0;
+}
+
+.title {
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .navSide {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    .navItem {
+      .title {
+        margin-bottom: 20px;
+      }
+      .item {
+        margin-top: 10px;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: $standartB;
+          transition: all 0.2s linear;
+          &:hover {
+            color: $main;
+          }
+        }
+      }
+    }
+  }
+  .infoSide {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .phone,
+    .email {
+      a {
+        text-decoration: none;
+        color: $standartB;
+        transition: all 0.2s linear;
+        font-weight: 700;
+        &:hover {
+          color: $main;
+        }
+      }
+    }
+    .adress,
+    .graf {
+      font-weight: 500;
+    }
+    .messangers {
+      img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        &:hover {
+          transform: scale(1.1);
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+.rules {
+  border-top: 1px solid $border;
+  margin-top: 40px;
+  padding: 40px 0;
+  p {
+    font-weight: 400;
+  }
+}

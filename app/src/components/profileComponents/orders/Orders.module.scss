@@ -1,0 +1,113 @@
+@import "../../../UI/styles/colors.scss";
+
+.order {
+  margin-bottom: 10px;
+}
+
+.listHead {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid $standartB;
+  gap: 10px;
+  .headItem {
+    flex: 1;
+    padding: 5px 10px;
+    border-right: 2px solid $backModal;
+    border-left: 2px solid $backModal;
+  }
+  margin-bottom: 20px;
+}
+
+.hint {
+  margin-bottom: 20px;
+  color: $backModal;
+  font-size: 14px;
+}
+
+.short {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 2px solid $standartB;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:hover {
+    border-top: 2px solid $main;
+    p:first-child {
+      border-left: 2px solid $main;
+    }
+    p:last-child {
+      border-right: 2px solid $main;
+    }
+  }
+  p {
+    transition: all 0.2s linear;
+    flex: 1;
+    padding: 5px 10px;
+    border-right: 2px solid $backModal;
+    border-left: 2px solid $backModal;
+  }
+}
+
+.orderInfo {
+  margin-top: 10px;
+  padding: 10px;
+  border-right: 2px solid $backModal;
+  border-left: 2px solid $backModal;
+  border-bottom: 1px solid $backModal;
+  display: flex;
+  gap: 20px;
+  .infoSide,
+  .itemsSide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    h3 {
+      margin-bottom: 10px;
+    }
+    .infoBox {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border-bottom: 1px solid $backModal;
+      padding-bottom: 10px;
+      p:last-child {
+        color: $backModal;
+        font-size: 14px;
+      }
+    }
+  }
+  .itemsSide {
+    .item {
+      display: flex;
+      gap: 10px;
+      border-bottom: 1px solid $border;
+      padding-bottom: 10px;
+      .imageSide {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .descSide {
+        width: 100%;
+        .top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 20px;
+          span {
+            color: $backModal;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

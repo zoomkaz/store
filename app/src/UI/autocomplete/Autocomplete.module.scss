@@ -1,0 +1,24 @@
+@import "../styles/colors.scss";
+
+.autocomplete {
+  border: 1px solid $border;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 2px $border;
+  position: absolute;
+  width: 100%;
+  background: $standartW;
+}
+
+.item {
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  &:hover {
+    color: $main;
+  }
+}
+
+.searchString {
+  color: $main;
+}

@@ -1,0 +1,268 @@
+@import "../../UI/styles/colors.scss";
+
+.skeletonContainer {
+  margin: -133px auto 133px auto;
+  display: flex;
+  gap: 10px;
+  padding: 143px 10px 20px 10px;
+  flex-wrap: wrap;
+}
+
+.skeletonBlock1,
+.skeletonBlock2 {
+  width: 100%;
+}
+
+.skeletonBlock1 {
+  flex: 3;
+}
+
+.skeletonBlock2 {
+  flex: 1;
+  @media (max-width: 719px) {
+    display: none;
+  }
+}
+
+.itemPageContainer {
+  margin-top: 50px;
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    span {
+      a {
+        text-decoration: none;
+        color: #777777;
+      }
+      font-size: 14px;
+      color: #777777;
+    }
+  }
+}
+
+.itemPageBox {
+  border: 2px solid $border;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 30px 20px;
+  display: flex;
+  gap: 50px;
+  .imageSide {
+    flex: 2;
+    display: flex;
+    // height: 530px;
+    img {
+      width: 100%;
+      // max-height: 500px;
+    }
+  }
+  .descriptionSide {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    h4 {
+      margin: 30px 0 20px 0;
+    }
+    .descriptionItem {
+      img {
+        width: 80px;
+        height: 80px;
+      }
+      p {
+        color: $backModal;
+        span {
+          color: $standartB;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .orderSide {
+    flex: 1;
+    .deliveryInfo,
+    .orderCalc {
+      border-radius: 8px;
+      border: 2px solid $border;
+      box-shadow: 0 0 5px 2px $border;
+      padding: 20px;
+    }
+    .deliveryInfo {
+      margin-top: 10px;
+      p {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+    .orderCalc {
+      .bonus {
+        margin-bottom: 10px;
+        span {
+          padding: 2px 5px;
+          font-size: 12px;
+          font-weight: 400;
+          background-color: $border;
+          border-radius: 8px;
+        }
+      }
+      p {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .btnsContainer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        .inputBtns {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          input,
+          button {
+            padding: 5px;
+            border: 1px solid $mainD;
+            background-color: $main;
+            outline: none;
+            color: $standartW;
+            text-align: center;
+            font-size: 24px;
+          }
+          input {
+            max-width: 50px;
+          }
+          button {
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.2s linear;
+            &:hover {
+              background-color: $mainD;
+            }
+          }
+          .plus {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+          }
+          .minus {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+          }
+        }
+        .toBasket {
+          flex: 2;
+          padding: 9px;
+          border: 1px solid $mainD;
+          background-color: $main;
+          outline: none;
+          color: $standartW;
+          text-align: center;
+          font-size: 18px;
+          border-radius: 8px;
+          transition: all 0.2s linear;
+          &:hover {
+            cursor: pointer;
+            background-color: $mainD;
+          }
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+      }
+      .toBuy {
+        margin-top: 10px;
+        width: 100%;
+        padding: 9px;
+        border: 1px solid $mainD;
+        background-color: transparent;
+        outline: none;
+        color: $standartB;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 8px;
+        transition: all 0.2s linear;
+        &:hover {
+          cursor: pointer;
+          background-color: $mainD;
+          color: $standartW;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+.btnIn {
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.2s linear;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid $main;
+  background-color: transparent;
+  cursor: default;
+}
+
+.btnDis {
+  text-align: center;
+  color: $backModal;
+  margin-top: 10px;
+  font-size: 14px;
+  cursor: not-allowed;
+}
+
+.swiperContainer {
+  position: relative;
+  height: 100%;
+  max-width: 500px;
+  max-height: 290px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 40px;
+}
+
+.mySwiper {
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  width: 100%;
+  img {
+    width: 100% !important;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.mySwiper2 {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  cursor: grab;
+  transition: all 0.2s linear;
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.slide2 {
+  width: 100%;
+  height: 25% !important;
+  opacity: 0.4;
+  border: 2px solid $border;
+  border-radius: 8px;
+  max-width: 64px;
+  max-height: 64px;
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+}

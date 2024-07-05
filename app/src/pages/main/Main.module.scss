@@ -1,0 +1,64 @@
+@import "../../UI/styles/colors.scss";
+
+.main {
+  min-height: 100dvh;
+  margin-bottom: 150px;
+}
+
+.popular {
+  margin-top: 100px;
+  h2 {
+    font-size: 30px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $standartB;
+}
+
+.categotyContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 30px;
+  column-gap: 20px;
+  margin-top: 20px;
+  .categoryBox {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    min-height: 250px;
+    border: 1px solid $border;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 2px $border;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.05);
+    }
+    text-align: center;
+    img {
+      min-width: 200px;
+      min-height: 200px;
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 426px) and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 426px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

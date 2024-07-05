@@ -1,0 +1,257 @@
+@import "../../UI/styles/colors.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  border-bottom: 1px solid $border;
+  position: relative;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.connection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .phone {
+    margin-left: 60px;
+  }
+  .place > p,
+  .phone,
+  .email {
+    cursor: pointer;
+    transition: all 0.2s linear;
+    a {
+      text-decoration: none;
+      color: $standartB;
+      transition: all 0.2s linear;
+      &:hover {
+        color: $main;
+      }
+    }
+    &:hover {
+      color: $main;
+    }
+  }
+  .place {
+    position: relative;
+    .confirmModal {
+      position: absolute;
+      background: $standartW;
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid $border;
+      margin-top: 5px;
+      box-shadow: 0 0 5px 1px $border;
+      p {
+        min-width: max-content;
+        font-weight: 400;
+        span {
+          font-weight: 600;
+        }
+      }
+      .btns {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .btnYes,
+        .btnNo {
+          padding: 5px 10px;
+          border-radius: 8px;
+          border: 1px solid $main;
+          background: transparent;
+          cursor: pointer;
+          transition: all 0.2s linear;
+        }
+        .btnYes {
+          background: $main;
+          color: $standartW;
+          &:hover {
+            background: $mainD;
+          }
+        }
+        .btnNo {
+          &:hover {
+            background: $mainD;
+            color: $standartW;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .navItem {
+    text-decoration: none;
+    color: $standartB;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $main;
+    }
+  }
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  input {
+    min-width: 270px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid $border;
+    &:focus {
+      border: 2px solid $main;
+    }
+  }
+}
+
+.mainCities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  p {
+    transition: all 0.2s linear;
+    cursor: pointer;
+    &:hover {
+      color: $main;
+    }
+  }
+}
+
+.autocompleteContainer {
+  position: relative;
+}
+
+.headerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  gap: 20px;
+  .searchContainer {
+    position: relative;
+    width: 100%;
+    max-width: 630px;
+    input {
+      width: 100%;
+      padding: 10px 40px 10px 20px;
+      border-radius: 8px;
+      outline: none;
+      border: 2px solid $border;
+      font-size: 18px;
+      font-weight: 700;
+      &:focus {
+        border: 2px solid $main;
+      }
+    }
+    .searchImg {
+      position: absolute;
+      right: 20px;
+      top: 13px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .authIcons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .basket,
+  .profile {
+    img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .profile {
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.hiddenHeader {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid $border;
+  transition: top 0.3s linear;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+}
+
+.searchResult {
+  position: absolute;
+  margin-top: 10px;
+  background-color: $standartW;
+  border-radius: 8px;
+  border: 2px solid $border;
+  padding: 5px 10px;
+  width: 100%;
+  box-shadow: 0 0 5px 2px $border;
+  z-index: 2;
+  a {
+    text-decoration: none;
+    color: $standartB;
+  }
+  .resultItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    &:hover {
+      cursor: pointer;
+      background-color: $border;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    p {
+      span {
+        color: $backModal;
+        font-size: 12px;
+      }
+    }
+  }
+}
